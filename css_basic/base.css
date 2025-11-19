@@ -1,0 +1,174 @@
+/* Importing webfonts */
+/* (If you're learning CSS, you should disregard that) */
+
+@import url(https://fonts.googleapis.com/css?family=Yeseva+One);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic,400italic);
+
+
+/* ----------------------------------------------------
+   Base Reset (Light Modern Reset)
+---------------------------------------------------- */
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	font-family: 'Josefin Sans', serif;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Ensure new HTML5 elements behave consistently */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+img, picture, video, canvas {
+	max-width: 100%;
+	display: block;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	color: #F80002;
+	text-decoration: none;
+}
+
+
+/* ----------------------------------------------------
+   Layout & Structure
+---------------------------------------------------- */
+
+@media (min-width: 1100px) {
+	body {
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+}
+
+article, aside, header, footer {
+	padding: 50px 15px;
+}
+
+article > *:first-child {
+	margin-top: 0;
+}
+
+
+/* ----------------------------------------------------
+   Typography
+---------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6, header {
+	font-family: 'Yeseva One', sans-serif;
+	color: rgba(0, 0, 0, 0.9);
+}
+
+p { margin-bottom: 15px; }
+
+h1 { font-size: 36px; margin: 40px 0 20px; }
+h2 { font-size: 32px; margin: 30px 0 15px; }
+h3 { font-size: 28px; margin: 25px 0 10px; }
+h4 { font-size: 20px; font-weight: bold; margin: 20px 0 10px; }
+h5 { font-size: 18px; font-weight: bold; margin: 15px 0 10px; }
+h6 { font-weight: bold; margin: 5px 0; }
+
+
+/* ----------------------------------------------------
+   Header Navigation
+---------------------------------------------------- */
+
+header {
+	padding: 20px 15px;
+	border-bottom: 1px solid rgb(221,221,221);
+	transition: border-bottom-color 0.4s ease;
+	background: white;
+
+	/* Modern layout */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header ul {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+header li.logo {
+	font-size: 36px;
+}
+
+header a {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* ----------------------------------------------------
+   Aside Styles
+---------------------------------------------------- */
+
+aside {
+	background: #FAFAFA;
+}
+
+aside p {
+	background: #ddd;
+	border: 1px solid #bbb;
+	color: black;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+
+/* ----------------------------------------------------
+   Footer
+---------------------------------------------------- */
+
+footer {
+	padding: 20px 15px;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+footer a {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* ----------------------------------------------------
+   Responsive Behavior
+---------------------------------------------------- */
+
+@media (max-width: 800px) {
+
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
+
+	header ul {
+		flex-wrap: wrap;
+	}
+
+	body.works_on_smartphone {
+		display: block;
+	}
+
+	body.works_on_smartphone main {
+		display: block;
+	}
+}
